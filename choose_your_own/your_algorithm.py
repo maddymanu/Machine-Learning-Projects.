@@ -31,16 +31,21 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
-from sklearn.ensemble import AdaBoostClassifier
+
+features_train = features_train[:len(features_train)/100] 
+labels_train = labels_train[:len(labels_train)/100] 
+
+from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
-clf = AdaBoostClassifier()
-
-clf.fit(features_train, labels_train)
+clf = SVC(kernel = 'rbf' , C=10000)
+clf.fit(features_train , labels_train)
 
 pred = clf.predict(features_test)
+print pred[10]
 
-print accuracy_score(labels_test, pred)
+acc = accuracy_score(pred , labels_test)
+print acc
 
 
 try:
