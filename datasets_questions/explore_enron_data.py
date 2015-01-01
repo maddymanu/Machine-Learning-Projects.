@@ -21,9 +21,9 @@ import pandas as pd
 # from feature_format import featureFormat, targetFeatureSplit
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
-enron_data = pd.DataFrame(enron_data)
-enron_data = enron_data.T
+# enron_data = pd.DataFrame(enron_data)
+# enron_data = enron_data.T
 
 
 
-print  (enron_data["YEAP SOON"])
+print   enron_data['PRENTICE JAMES']['total_stock_value']
