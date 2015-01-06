@@ -32,6 +32,10 @@ feature_train, feature_test, target_train, target_test = train_test_split(featur
 train_color = "b"
 test_color = "r"
 
+
+
+
+
 from sklearn.linear_model import LinearRegression
 reg = LinearRegression()
 reg.fit(feature_train , target_train)
